@@ -15,6 +15,7 @@ import MapView from './components/MapView';
 function App() {
   return (
     <BrowserRouter>
+    {/* <MapView/> */}
       <Navbar/>
       <Routes>
       <Route path='/' element={<HeroSection/>} ></Route>
