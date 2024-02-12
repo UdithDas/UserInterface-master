@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import Signup from './components/Signup';
-import MapComponent from './components/Map';
+import MapView from './components/MapView';
+
 
 
 
@@ -19,7 +20,7 @@ function App() {
       <Route path='/' element={<HeroSection/>} ></Route>
       <Route path='/' element={<Footer/>} ></Route>
       <Route path='/sign-up' element={<Signup/>} ></Route>
-      <Route path='/map' element={<MapComponent/>} ></Route>
+      <Route path='/map' element={<MapView/>} ></Route>
       </Routes>
       <Footer/>
       </BrowserRouter>
