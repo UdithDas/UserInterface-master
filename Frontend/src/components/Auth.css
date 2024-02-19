@@ -1,10 +1,10 @@
 
-  /* Auth.css */
-  body {
+  Auth.css
+  .bgbody {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('../../public/bgimage.jpg'); /*Replace with your image*/
+    background-image: url('../../public/bgimage.jpg'); 
     background-size: cover;
     background-position: center;
     font-family: 'Arial', sans-serif; /* Add a preferred font-family */

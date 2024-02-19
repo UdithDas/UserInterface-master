@@ -1,6 +1,6 @@
 import React from 'react'
 import Map, { Marker } from "react-map-gl";
-import mapboxgl from 'mapbox-gl';
+
 
 const MapView = () => {
 
@@ -8,16 +8,14 @@ const MapView = () => {
 
 
   return (
-    <div>
+    <div style={{height:'100vh',width:'100vw'}} >
       <Map
           initialViewState={{
-            // latitude: startMarker.coordinates.lat,
-            // longitude: startMarker.coordinates.long,
-            // latitude: 37.8,
-            // longitude: -122.4,
-            zoom: 8,
-            bearing: 5,
-          }}
+          latitude: 10.8505, // Latitude of Kerala
+          longitude: 76.2711, // Longitude of Kerala
+          zoom: 8, // Adjust zoom level as needed
+          bearing: 0,
+        }}
           // ref={mapRef}
           style={{ width: "100vw", height: "300%" }}
           mapStyle={"mapbox://styles/mapbox/light-v11"}
