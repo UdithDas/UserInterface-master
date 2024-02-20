@@ -1,6 +1,6 @@
-// Signup.js
 import React, { useState } from 'react';
 import './Auth.css';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = ({ toggleForm }) => {
   const [formData, setFormData] = useState({
@@ -8,13 +8,21 @@ const Signup = ({ toggleForm }) => {
     email: '',
     password: '',
   });
-
+ 
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Basic form validation
+    if (!formData.username || !formData.email || !formData.password) {
+      console.error('Please fill in all fields');
+      return;
+    }
+
     try {
       // Send signup data to the server
       const response = await fetch('http://localhost:5000/api/signup', {
@@ -24,15 +32,25 @@ const Signup = ({ toggleForm }) => {
         },
         body: JSON.stringify(formData),
       });
-  
+
+      if (!response.ok) {
+        throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+      }
+
       // Handle the server response
       const result = await response.json();
       console.log(result);
+
+      // You might want to redirect or perform additional actions upon successful signup
+
     } catch (error) {
-      console.error('Error submitting signup form:', error);
+      console.error('Error submitting signup form:', error.message);
     }
   };
-  
+
+  const signinnav =()=>{
+    navigate('/sign-in');
+  }
 
   return (
     <div className="auth-container">
@@ -69,7 +87,7 @@ const Signup = ({ toggleForm }) => {
       </form>
       <p>
         Already have an account?{' '}
-        <button onClick={() => toggleForm('signin')}>Signin</button>
+        <button onClick={signinnav}>Signin</button>
       </p>
     </div>
   );

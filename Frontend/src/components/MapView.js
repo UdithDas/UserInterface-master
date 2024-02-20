@@ -1,5 +1,6 @@
 import React from 'react'
 import Map, { Marker } from "react-map-gl";
+import SearchBar from './SearchBar';
 
 
 const MapView = () => {
@@ -8,14 +9,15 @@ const MapView = () => {
 
 
   return (
+    
     <div style={{height:'100vh',width:'100vw'}} >
       <Map
           initialViewState={{
-          latitude: 10.8505, // Latitude of Kerala
-          longitude: 76.2711, // Longitude of Kerala
-          zoom: 8, // Adjust zoom level as needed
-          bearing: 0,
-        }}
+            latitude: 10.5276, // Latitude of Thrissur, Kerala
+            longitude: 76.2144, // Longitude of Thrissur, Kerala
+            zoom: 10, // Adjust zoom level as needed
+            bearing: 0,
+          }}
           // ref={mapRef}
           style={{ width: "100vw", height: "300%" }}
           mapStyle={"mapbox://styles/mapbox/light-v11"}
