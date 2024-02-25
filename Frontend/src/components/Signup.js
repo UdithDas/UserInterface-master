@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Auth.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,9 @@ const Signup = ({ toggleForm }) => {
   });
  
   const navigate = useNavigate();
+  // useEffect(() => {
+  //   navigate(-1);
+  // },[])
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };

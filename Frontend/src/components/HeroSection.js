@@ -24,7 +24,7 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
-          onClick={handleGetStartedClick}
+          onClick={() => navigate('/map')}
         >
           GET STARTED
         </Button>

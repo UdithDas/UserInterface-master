@@ -20,7 +20,7 @@ function App() {
       <Navbar/>
       <Routes>
       <Route path='/' element={<HeroSection/>} ></Route>
-      <Route path='/' element={<Footer/>} ></Route>
+      {/* <Route path='/' element={<Footer/>} ></Route> */}
       <Route path='/sign-up' element={<Signup/>} ></Route>
       <Route path='/sign-in' element={<Signin/>} ></Route>
       <Route path='/map' element={<MapView/>} ></Route>
